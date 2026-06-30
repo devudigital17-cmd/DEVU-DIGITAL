@@ -1,0 +1,108 @@
+/* Fonts must come first */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* Tailwind v4 */
+@import "tailwindcss";
+
+/* ─── Theme tokens ───────────────────────────────────────────────────────────── */
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* ─── Dark theme (default) ──────────────────────────────────────────────────── */
+:root,
+[data-theme="dark"] {
+  --bg-primary:    #050508;
+  --bg-secondary:  #07070d;
+  --bg-elevated:   #0d0d14;
+
+  --surface-1:     rgba(255,255,255,0.02);
+  --surface-2:     rgba(255,255,255,0.04);
+  --surface-hover: rgba(255,255,255,0.06);
+
+  --border:        rgba(255,255,255,0.07);
+  --border-strong: rgba(255,255,255,0.12);
+
+  --text-primary:   #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted:     #475569;
+
+  --accent-violet: #7c3aed;
+  --accent-blue:   #3b82f6;
+  --accent-glow:   rgba(124,58,237,0.3);
+
+  --shadow-color: rgba(0,0,0,0.4);
+  --grid-line:    rgba(255,255,255,0.5);
+  --noise-opacity: 0.025;
+}
+
+/* ─── Light theme ────────────────────────────────────────────────────────────── */
+[data-theme="light"] {
+  --bg-primary:    #fafafa;
+  --bg-secondary:  #f4f4f6;
+  --bg-elevated:   #ffffff;
+
+  --surface-1:     rgba(0,0,0,0.025);
+  --surface-2:     rgba(0,0,0,0.04);
+  --surface-hover: rgba(0,0,0,0.06);
+
+  --border:        rgba(0,0,0,0.08);
+  --border-strong: rgba(0,0,0,0.14);
+
+  --text-primary:   #0f0f14;
+  --text-secondary: #52525b;
+  --text-muted:     #94a3b8;
+
+  --accent-violet: #7c3aed;
+  --accent-blue:   #3b82f6;
+  --accent-glow:   rgba(124,58,237,0.15);
+
+  --shadow-color: rgba(0,0,0,0.08);
+  --grid-line:    rgba(0,0,0,0.4);
+  --noise-opacity: 0.015;
+}
+
+/* ─── Base ───────────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(124,58,237,0.3); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(124,58,237,0.5); }
+
+/* ─── Selection ──────────────────────────────────────────────────────────────── */
+::selection { background: rgba(124,58,237,0.3); color: var(--text-primary); }
+
+/* ─── Focus ──────────────────────────────────────────────────────────────────── */
+:focus-visible { outline: 2px solid rgba(124,58,237,0.6); outline-offset: 2px; border-radius: 4px; }
+
+/* ─── Reduce motion ──────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ─── Theme transition smoothing for all elements ───────────────────────────── */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
