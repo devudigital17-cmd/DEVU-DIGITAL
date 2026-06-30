@@ -17,7 +17,7 @@ import Contacts from "./components/sections/Contacts";
 import PageLoader from "./components/ui/PageLoader";
 import CustomCursor from "./components/ui/CustomCursor";
 import ScrollProgressBar from "./components/ui/ScrollProgressBar";
-import useLenis from "./hooks/Uselenis";
+import useLenis from "./hooks/useLenis";
 
 export default function App() {
   const [loaded, setLoaded] = useState(false);
