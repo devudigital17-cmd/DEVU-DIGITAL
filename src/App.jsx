@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import Hero from "./components/sections/Hero";
@@ -35,6 +36,9 @@ export default function App() {
 
       {/* Scroll progress bar */}
       <ScrollProgressBar />
+
+      {/* Vercel Speed Insights */}
+      <SpeedInsights />
 
       {/* Main site — revealed after loader */}
       <div
