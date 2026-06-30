@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Analytics } from "@vercel/analytics/next"
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import Hero from "./components/sections/Hero";
@@ -59,6 +60,7 @@ export default function App() {
           <Blog />
           <ContactCTA />
           <Contacts />
+          <Analytics/>
         </main>
         <Footer />
       </div>
