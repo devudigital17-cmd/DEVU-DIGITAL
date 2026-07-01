@@ -11,8 +11,9 @@ const viewport = { once: true, margin: "-80px" };
 const POSTS = [
   {
     id: 1,
-    title: "Why your startup's website is costing you customers",
-    excerpt:"Most startup websites are built to ship fast, not to convert. The difference in outcome is massive — here's how to fix it.",
+    title: "Why Your Startup's Website Is Costing You Customers",
+    excerpt:
+      "Most startup websites are built to ship fast, not to convert. The difference in outcome is massive—here's how to fix it.",
     date: "Jul 1, 2026",
     readTime: "6 min read",
     tag: "Strategy",
@@ -20,28 +21,33 @@ const POSTS = [
     image: blog1,
     url: "https://devu17.blogspot.com/2026/06/why-your-startups-website-is-costing.html",
   },
+
   {
     id: 2,
-    title: "The motion design principles we use on every project",
-    excerpt: "Animation isn't decoration — it's communication. A breakdown of how we use Framer Motion to make products feel alive.",
-    date: "July 01, 2026",
+    title: "The Motion Design Principles We Use on Every Project",
+    excerpt:
+      "Animation isn't decoration—it's communication. Learn how we use motion to make digital experiences feel alive.",
+    date: "Jul 2, 2026",
     readTime: "7 min read",
     tag: "Design",
     tagColor: "#ec4899",
-    gradient: "from-pink-600 to-rose-700",
+    image: blog1,
+    url: "https://devu17.blogspot.com/",
   },
+
   {
     id: 3,
-    title: "React + Tailwind v4: what's actually different",
-    excerpt: "Tailwind v4 is a full rewrite. No more config file, new CSS-first approach. Here's what it means for your projects.",
-    date: "July 05, 2026",
+    title: "React + Tailwind CSS v4: What's Actually Different?",
+    excerpt:
+      "Tailwind CSS v4 introduces a completely new CSS-first workflow. Here's what changed and why it matters.",
+    date: "Coming Soon",
     readTime: "6 min read",
     tag: "Engineering",
     tagColor: "#10b981",
-    gradient: "from-emerald-600 to-teal-700",
+    image: blog1,
+    url: "https://devu17.blogspot.com/",
   },
 ];
-
 const BlogCard = ({ post, featured = false }) => (
   <motion.a
     href={post.url}
@@ -53,20 +59,16 @@ const BlogCard = ({ post, featured = false }) => (
     whileHover={{ y: -4, transition: { duration: 0.2 } }}
   >
     {/* Visual top */}
-    <div
-  className={`relative ${
-    featured ? "md:w-2/5 h-56 md:h-auto" : "h-56"
-  } flex-shrink-0 overflow-hidden`}
->
-  <img
-    src={post.image}
-    alt={post.title}
-    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-  />
-
-  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/10" />
-
-  <div className="absolute top-4 left-4">
+    <div className={`relative ${featured ? "md:w-2/5 h-56 md:h-auto" : "h-56"} flex-shrink-0 overflow-hidden`}
+      >
+      <img
+        src={post.image}
+        alt={post.title}
+        loading="lazy"
+        className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+        />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/10" />
+      <div className="absolute top-4 left-4">
     <span
       className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold text-white"
       style={{
@@ -74,7 +76,7 @@ const BlogCard = ({ post, featured = false }) => (
         backdropFilter: "blur(12px)",
         border: "1px solid rgba(255,255,255,.15)",
       }}
-    >
+      >
       <Tag size={10} />
       {post.tag}
     </span>
@@ -96,7 +98,7 @@ const BlogCard = ({ post, featured = false }) => (
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center gap-1 text-xs font-semibold text-violet-400 hover:text-violet-300 group-hover:gap-2 transition-all">
-        Read article <ArrowUpRight size={12} /> 
+        Read Full Article → <ArrowUpRight size={12} /> 
       </a>
     </div>
   </motion.a>
