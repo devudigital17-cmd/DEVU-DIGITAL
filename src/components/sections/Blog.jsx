@@ -42,7 +42,10 @@ const POSTS = [
 ];
 
 const BlogCard = ({ post, featured = false }) => (
-  <motion.article
+  <motion.a
+    href={post.url}
+    target="_blank"
+    rel="noopener noreferrer"
     variants={fadeUp}
     className={`group relative rounded-2xl overflow-hidden cursor-pointer flex flex-col ${featured ? "md:flex-row" : ""}`}
     style={{ border: "1px solid rgba(255,255,255,0.07)" }}
@@ -83,7 +86,7 @@ const BlogCard = ({ post, featured = false }) => (
         Read article <ArrowUpRight size={12} /> 
       </a>
     </div>
-  </motion.article>
+  </motion.a>
 );
 
 export default function Blog() {
