@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, Clock, Tag } from "lucide-react";
 import Container from "../ui/Container";
 import SectionTitle from "../ui/SectionTitle";
+import blog1 from "../../assets/blog/blog1.png";
 
 const fadeUp  = { hidden: { opacity: 0, y: 40 }, show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } } };
 const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.1 } } };
@@ -11,19 +12,19 @@ const POSTS = [
   {
     id: 1,
     title: "Why your startup's website is costing you customers",
-    excerpt: "Most startup websites are built to ship fast, not to convert. The difference in outcome is massive — here's how to fix it.",
-    date: "Jun 20, 2025",
-    readTime: "5 min read",
+    excerpt:"Most startup websites are built to ship fast, not to convert. The difference in outcome is massive — here's how to fix it.",
+    date: "Jul 1, 2026",
+    readTime: "6 min read",
     tag: "Strategy",
     tagColor: "#7c3aed",
-    gradient: "from-violet-600 to-indigo-700",
+    image: blog1,
     url: "https://devu17.blogspot.com/2026/06/why-your-startups-website-is-costing.html",
   },
   {
     id: 2,
     title: "The motion design principles we use on every project",
     excerpt: "Animation isn't decoration — it's communication. A breakdown of how we use Framer Motion to make products feel alive.",
-    date: "Jun 14, 2025",
+    date: "July 01, 2026",
     readTime: "7 min read",
     tag: "Design",
     tagColor: "#ec4899",
@@ -33,7 +34,7 @@ const POSTS = [
     id: 3,
     title: "React + Tailwind v4: what's actually different",
     excerpt: "Tailwind v4 is a full rewrite. No more config file, new CSS-first approach. Here's what it means for your projects.",
-    date: "Jun 7, 2025",
+    date: "July 05, 2026",
     readTime: "6 min read",
     tag: "Engineering",
     tagColor: "#10b981",
@@ -53,20 +54,32 @@ const BlogCard = ({ post, featured = false }) => (
   >
     {/* Visual top */}
     <div
-      className={`relative ${featured ? "md:w-2/5 h-48 md:h-auto" : "h-44"} flex-shrink-0 overflow-hidden`}
-      style={{ background: `linear-gradient(135deg, var(--from), var(--to))` }}
+  className={`relative ${
+    featured ? "md:w-2/5 h-56 md:h-auto" : "h-56"
+  } flex-shrink-0 overflow-hidden`}
+>
+  <img
+    src={post.image}
+    alt={post.title}
+    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+  />
+
+  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/10" />
+
+  <div className="absolute top-4 left-4">
+    <span
+      className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold text-white"
+      style={{
+        background: "rgba(0,0,0,0.45)",
+        backdropFilter: "blur(12px)",
+        border: "1px solid rgba(255,255,255,.15)",
+      }}
     >
-      <div
-        className={`absolute inset-0 bg-gradient-to-br ${post.gradient} opacity-90`}
-      />
-      <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px)", backgroundSize: "25px 25px" }} />
-      {/* Tag */}
-      <div className="absolute top-4 left-4">
-        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold text-white" style={{ background: "rgba(0,0,0,0.3)", backdropFilter: "blur(8px)", border: "1px solid rgba(255,255,255,0.15)" }}>
-          <Tag size={10} /> {post.tag}
-        </span>
-      </div>
-    </div>
+      <Tag size={10} />
+      {post.tag}
+    </span>
+  </div>
+</div>
 
     {/* Content */}
     <div className="flex flex-col flex-1 p-5 gap-3" style={{ background: "rgba(255,255,255,0.02)" }}>
