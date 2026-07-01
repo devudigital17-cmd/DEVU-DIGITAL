@@ -107,11 +107,18 @@ export default function Blog() {
               subtitle="Thoughts on design, engineering, and building digital products that actually work."
               align="left"
             />
-            <a href="https://devu17.blogspot.com/"
-              target="_blank"
-              rel="noopener noreferrer" > className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors group shrink-0">
-              View all posts <ArrowUpRight size={14} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
-            </a>
+            <a
+  href="https://devu17.blogspot.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors group shrink-0"
+>
+  View all posts
+  <ArrowUpRight
+    size={14}
+    className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform"
+  />
+</a>
           </div>
 
           <motion.div
