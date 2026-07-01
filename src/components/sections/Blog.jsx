@@ -33,7 +33,7 @@ const POSTS = [
     tag: "Design",
     tagColor: "#ec4899",
     image: blog2,
-    url: "https://devu17.blogspot.com/",
+    url: "https://devu17.blogspot.com/2026/07/the-motion-design-principles-we-use-on.html",
   },
 
   {
