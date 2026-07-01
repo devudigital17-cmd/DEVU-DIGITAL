@@ -15,7 +15,7 @@ const POSTS = [
     title: "Why Your Startup's Website Is Costing You Customers",
     excerpt:
       "Most startup websites are built to ship fast, not to convert. The difference in outcome is massive—here's how to fix it.",
-    date: "Jul 1, 2026",
+    date: "Jun 30, 2026",
     readTime: "6 min read",
     tag: "Strategy",
     tagColor: "#7c3aed",
@@ -28,7 +28,7 @@ const POSTS = [
     title: "The Motion Design Principles We Use on Every Project",
     excerpt:
       "Animation isn't decoration—it's communication. Learn how we use motion to make digital experiences feel alive.",
-    date: "Jul 2, 2026",
+    date: "Jul 1, 2026",
     readTime: "7 min read",
     tag: "Design",
     tagColor: "#ec4899",
