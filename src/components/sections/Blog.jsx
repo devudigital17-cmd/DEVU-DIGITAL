@@ -76,9 +76,12 @@ const BlogCard = ({ post, featured = false }) => (
         {post.title}
       </h3>
       <p className="text-sm text-slate-400 leading-relaxed flex-1">{post.excerpt}</p>
-      <div className="flex items-center gap-1 text-xs font-semibold text-violet-400 group-hover:gap-2 transition-all">
-        Read article <ArrowUpRight size={12} />
-      </div>
+      <a href={post.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-1 text-xs font-semibold text-violet-400 hover:text-violet-300 group-hover:gap-2 transition-all">
+        Read article <ArrowUpRight size={12} /> 
+      </a>
     </div>
   </motion.article>
 );
