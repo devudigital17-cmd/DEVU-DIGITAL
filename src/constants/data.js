@@ -110,9 +110,6 @@ export const FAQ_ITEMS = [
 
 export const BLOG_POSTS = [
   {
-    href="https://devu17.blogspot.com/2026/06/why-your-startups-website-is-costing.html",
-    target="_blank:,
-    rel="noopener noreferrer",
     id: "1",
     title: "Why your startup's website is costing you customers",
     excerpt: "Most startup websites are built to ship fast, not to convert. Here's how to fix that.",
