@@ -17,6 +17,7 @@ const POSTS = [
     tag: "Strategy",
     tagColor: "#7c3aed",
     gradient: "from-violet-600 to-indigo-700",
+    url: "https://devu17.blogspot.com/2026/06/why-your-startups-website-is-costing.html",
   },
   {
     id: 2,
