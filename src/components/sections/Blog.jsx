@@ -31,7 +31,7 @@ const POSTS = [
     readTime: "7 min read",
     tag: "Design",
     tagColor: "#ec4899",
-    image: blog1,
+    image: blog2,
     url: "https://devu17.blogspot.com/",
   },
 
@@ -44,7 +44,7 @@ const POSTS = [
     readTime: "6 min read",
     tag: "Engineering",
     tagColor: "#10b981",
-    image: blog1,
+    image: blog3,
     url: "https://devu17.blogspot.com/",
   },
 ];
@@ -95,7 +95,8 @@ const BlogCard = ({ post, featured = false }) => (
       </h3>
       <p className="text-sm text-slate-400 leading-relaxed flex-1">{post.excerpt}</p>
       <div className="inline-flex items-center gap-1 text-xs font-semibold text-violet-400 group-hover:gap-2 transition-all">
-  Read Full article -> <ArrowUpRight size={12} />
+  Read Full article <ArrowUpRight size={12} />
+      </div>
     </div>
   </motion.a>
 );
