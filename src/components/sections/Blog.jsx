@@ -31,7 +31,6 @@ const POSTS = [
     readTime: "7 min read",
     tag: "Design",
     tagColor: "#ec4899",
-    image: blog2,
     url: "https://devu17.blogspot.com/",
   },
 
@@ -44,7 +43,7 @@ const POSTS = [
     readTime: "6 min read",
     tag: "Engineering",
     tagColor: "#10b981",
-    image: blog3,
+   
     url: "https://devu17.blogspot.com/",
   },
 ];
