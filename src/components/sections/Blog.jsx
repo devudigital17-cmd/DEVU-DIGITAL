@@ -3,6 +3,7 @@ import { ArrowUpRight, Clock, Tag } from "lucide-react";
 import Container from "../ui/Container";
 import SectionTitle from "../ui/SectionTitle";
 import blog1 from "../../assets/blog/blog1.png";
+import blog2 from "../../assets/blog/blog2.png";
 
 const fadeUp  = { hidden: { opacity: 0, y: 40 }, show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } } };
 const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.1 } } };
@@ -31,6 +32,7 @@ const POSTS = [
     readTime: "7 min read",
     tag: "Design",
     tagColor: "#ec4899",
+    image: blog2,
     url: "https://devu17.blogspot.com/",
   },
 
